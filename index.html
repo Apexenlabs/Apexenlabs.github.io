@@ -150,6 +150,54 @@
   .addon-item { background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--card-border); border-radius: var(--radius-sm); padding: 0.9rem 1rem; display: flex; flex-direction: column; gap: 0.3rem; }
   .addon-price { font-size: 1rem; font-weight: 700; color: var(--blue); }
   .addon-label { font-size: 0.8rem; color: var(--sub); line-height: 1.4; }
+  .personal-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    .personal-grid { grid-template-columns: 1fr !important; }
+  }
+
+  .pricing-toggle-wrap {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--glass);
+    border: 1px solid var(--card-border);
+    border-radius: 50px;
+    padding: 0.35rem;
+    width: fit-content;
+    margin: 0 auto 2.5rem;
+  }
+  .pricing-tab {
+    padding: 0.55rem 1.5rem;
+    border-radius: 50px;
+    border: none;
+    background: transparent;
+    color: var(--sub);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+  .pricing-tab.active {
+    background: var(--blue);
+    color: #fff;
+    box-shadow: 0 0 20px var(--blue-glow);
+  }
+  .personal-badge {
+    display: inline-block;
+    background: rgba(16,185,129,0.12);
+    border: 1px solid rgba(16,185,129,0.3);
+    border-radius: 8px;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.8rem;
+    color: #10B981;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+  }
+
   .addon-toggle-btn { background: var(--glass); backdrop-filter: blur(12px); border: 1px solid var(--card-border); border-radius: 50px; padding: 0.5rem 1.4rem; font-size: 0.85rem; font-weight: 500; color: var(--blue); cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif; }
   .addon-toggle-btn:hover { background: var(--blue-dim); border-color: rgba(59,130,246,0.4); }
 
@@ -308,8 +356,8 @@
     <div class="hero-grid">
       <div class="hero-left">
         <div class="hero-badge">Available for new projects</div>
-        <h1 class="hero-h1">Websites That Turn <em>Visitors</em> Into Customers</h1>
-        <p class="hero-sub">I build clean, professional websites for local businesses — fast, affordable, and built to get you more customers. No tech headaches, just a site that works.</p>
+        <h1 class="hero-h1">Websites That Make You <em>Stand Out</em></h1>
+        <p class="hero-sub">Whether you're a business, a freelancer, or building your personal brand — I build clean, fast, professional websites that get you noticed and get results.</p>
         <div class="hero-ctas">
           <a href="#contact" class="btn-primary">Get Your Website</a>
           <a href="#projects" class="btn-outline">View My Work</a>
@@ -318,7 +366,7 @@
           <div class="trust-avatars"><span>AK</span><span>TM</span><span>JS</span><span>RL</span></div>
           <div>
             <div class="stars">★★★★★</div>
-            <div>Trusted by 50+ local businesses</div>
+            <div>Trusted by 50+ clients worldwide</div>
           </div>
         </div>
         <div class="stats-row">
@@ -407,32 +455,32 @@
   <div class="container">
     <div class="section-header reveal">
       <div class="section-tag">What I Do</div>
-      <h2 class="section-title">What I Build for<br><span class="gradient-text">Your Business</span></h2>
-      <p class="section-sub">All frontend — clean, fast, and good-looking websites that work great on any device.</p>
+      <h2 class="section-title">What I Build for<br><span class="gradient-text">You</span></h2>
+      <p class="section-sub">From business sites to personal portfolios — clean, fast, professional websites for anyone who wants to show up online.</p>
     </div>
     <div class="services-grid">
       <div class="service-card tilt-card reveal reveal-delay-1">
         <div class="service-icon">🌐</div>
         <h3>Business Websites</h3>
-        <p>A clean website for your business that tells people who you are, what you do, and how to reach you. Simple, professional, and ready to go.</p>
+        <p>A professional website that tells the world what your business does, builds trust, and turns visitors into customers or leads.</p>
         <span class="service-tag">Most Popular</span>
       </div>
       <div class="service-card tilt-card reveal reveal-delay-2">
-        <div class="service-icon">🚀</div>
-        <h3>Landing Pages</h3>
-        <p>One focused page built to get people to take action — call you, fill out a form, or buy something. Great for ads and promotions.</p>
-        <span class="service-tag">High ROI</span>
+        <div class="service-icon">🙋</div>
+        <h3>Personal Portfolios</h3>
+        <p>Stand out to employers, colleges, or clients with a clean portfolio that shows your work, skills, and story. Built to impress.</p>
+        <span class="service-tag">Great for careers</span>
       </div>
       <div class="service-card tilt-card reveal reveal-delay-3">
-        <div class="service-icon">🖼️</div>
-        <h3>Portfolio & Gallery Sites</h3>
-        <p>Show off your work in a way that looks great. Perfect for photographers, artists, stylists, or anyone who wants to display what they do.</p>
-        <span class="service-tag">Visual</span>
+        <div class="service-icon">🚀</div>
+        <h3>Landing Pages</h3>
+        <p>One focused page built to drive action — perfect for promotions, ads, product launches, or getting sign-ups fast.</p>
+        <span class="service-tag">High ROI</span>
       </div>
       <div class="service-card tilt-card reveal reveal-delay-4">
         <div class="service-icon">📱</div>
         <h3>Mobile-First Design</h3>
-        <p>Every site I build looks great on phones, tablets, and desktops. Most of your visitors are on mobile — your site needs to work perfectly there.</p>
+        <p>Every site I build works perfectly on phones, tablets, and desktops. Your audience is on mobile — your site will be too.</p>
         <span class="service-tag">All Devices</span>
       </div>
     </div>
@@ -475,57 +523,108 @@
     <div class="section-header reveal" style="text-align:center">
       <div class="section-tag">Pricing</div>
       <h2 class="section-title">Simple, Transparent<br><span class="gradient-text">Pricing</span></h2>
-      <p class="section-sub" style="margin:0 auto">No hidden fees, no surprises. Pick the package that fits your business.</p>
+      <p class="section-sub" style="margin:0 auto">No hidden fees, no surprises. Pick the package that fits your goals.</p>
     </div>
-    <div class="pricing-grid">
-      <div class="pricing-card tilt-card reveal reveal-delay-1">
-        <div class="pricing-name">🟢 Starter</div>
-        <div class="pricing-price"><sup>$</sup>150</div>
-        <div class="pricing-desc">Perfect for businesses getting online fast.</div>
-        <ul class="pricing-features">
-          <li class="active">Custom 1-page website</li>
-          <li class="active">Up to 4 sections (Hero, Services, About, Contact)</li>
-          <li class="active">Mobile responsive design</li>
-          <li class="active">Contact form</li>
-          <li class="active">Basic SEO setup</li>
-          <li class="active">Speed optimization</li>
-          <li class="active">Free website hosting</li>
-          <li class="active">Same-day or next-day delivery</li>
-        </ul>
-        <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
+
+    <!-- PRICING TOGGLE -->
+    <div class="pricing-toggle-wrap reveal">
+      <button class="pricing-tab active" id="tabBusiness" onclick="switchTab('business')">💼 For Businesses</button>
+      <button class="pricing-tab" id="tabPersonal" onclick="switchTab('personal')">🙋 For Personal</button>
+    </div>
+
+    <!-- BUSINESS PLANS -->
+    <div id="plansBusiness">
+      <div class="pricing-grid">
+        <div class="pricing-card tilt-card reveal reveal-delay-1">
+          <div class="pricing-name">🟢 Starter</div>
+          <div class="pricing-price"><sup>$</sup>150</div>
+          <div class="pricing-desc">Perfect for businesses getting online fast.</div>
+          <ul class="pricing-features">
+            <li class="active">Custom 1-page website</li>
+            <li class="active">Up to 4 sections (Hero, Services, About, Contact)</li>
+            <li class="active">Mobile responsive design</li>
+            <li class="active">Contact form</li>
+            <li class="active">Basic SEO setup</li>
+            <li class="active">Speed optimization</li>
+            <li class="active">Free website hosting</li>
+            <li class="active">Same-day or next-day delivery</li>
+          </ul>
+          <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
+        </div>
+        <div class="pricing-card tilt-card featured reveal reveal-delay-2">
+          <div class="pricing-name">⭐ Standard</div>
+          <div class="pricing-price"><sup>$</sup>200</div>
+          <div class="pricing-desc">Designed to help businesses look professional and convert visitors into customers.</div>
+          <ul class="pricing-features">
+            <li class="active">Everything in Starter</li>
+            <li class="active">Better custom design</li>
+            <li class="active">Smooth animations</li>
+            <li class="active">Up to 6 sections</li>
+            <li class="active">Booking integration (Calendly)</li>
+            <li class="active">Social media links</li>
+            <li class="active">Faster optimization</li>
+            <li class="active">Better mobile experience</li>
+            <li class="active">Same-day or next-day delivery</li>
+          </ul>
+          <a href="#contact" class="btn-primary" style="width:100%;text-align:center;display:block">Get Started</a>
+        </div>
+        <div class="pricing-card tilt-card reveal reveal-delay-3">
+          <div class="pricing-name">💎 Premium</div>
+          <div class="pricing-price"><sup>$</sup>300</div>
+          <div class="pricing-desc">For businesses wanting a stronger brand presence and custom experience.</div>
+          <ul class="pricing-features">
+            <li class="active">Everything in Standard</li>
+            <li class="active">Premium custom layout</li>
+            <li class="active">2–4 extra pages</li>
+            <li class="active">Advanced motion effects</li>
+            <li class="active">Better SEO setup</li>
+            <li class="active">Priority support</li>
+            <li class="active">Launch &amp; setup support</li>
+            <li class="active">Same-day or next-day delivery (when available)</li>
+          </ul>
+          <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
+        </div>
       </div>
-      <div class="pricing-card tilt-card featured reveal reveal-delay-2">
-        <div class="pricing-name">⭐ Standard</div>
-        <div class="pricing-price"><sup>$</sup>200</div>
-        <div class="pricing-desc">Designed to help businesses look professional and convert visitors into customers.</div>
-        <ul class="pricing-features">
-          <li class="active">Everything in Starter</li>
-          <li class="active">Better custom design</li>
-          <li class="active">Smooth animations</li>
-          <li class="active">Up to 6 sections</li>
-          <li class="active">Booking integration (Calendly)</li>
-          <li class="active">Social media links</li>
-          <li class="active">Faster optimization</li>
-          <li class="active">Better mobile experience</li>
-          <li class="active">Same-day or next-day delivery</li>
-        </ul>
-        <a href="#contact" class="btn-primary" style="width:100%;text-align:center;display:block">Get Started</a>
-      </div>
-      <div class="pricing-card tilt-card reveal reveal-delay-3">
-        <div class="pricing-name">💎 Premium</div>
-        <div class="pricing-price"><sup>$</sup>300</div>
-        <div class="pricing-desc">For businesses wanting a stronger brand presence and custom experience.</div>
-        <ul class="pricing-features">
-          <li class="active">Everything in Standard</li>
-          <li class="active">Premium custom layout</li>
-          <li class="active">2–4 extra pages</li>
-          <li class="active">Advanced motion effects</li>
-          <li class="active">Better SEO setup</li>
-          <li class="active">Priority support</li>
-          <li class="active">Launch & setup support</li>
-          <li class="active">Same-day or next-day delivery (when available)</li>
-        </ul>
-        <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
+    </div>
+
+    <!-- PERSONAL PLANS -->
+    <div id="plansPersonal" style="display:none">
+      <div class="pricing-grid personal-grid">
+        <div class="pricing-card tilt-card reveal reveal-delay-1">
+          <div class="pricing-name">🟢 Starter Profile</div>
+          <div class="pricing-price"><sup>$</sup>50</div>
+          <div class="pricing-desc">Simple portfolio or resume-style site. Get online instantly.</div>
+          <div class="personal-badge">✅ Great for colleges &amp; job applications</div>
+          <ul class="pricing-features">
+            <li class="active">1-page personal website</li>
+            <li class="active">About section</li>
+            <li class="active">Skills &amp; interests</li>
+            <li class="active">Projects &amp; achievements</li>
+            <li class="active">Contact section</li>
+            <li class="active">Mobile responsive design</li>
+            <li class="active">Clean modern layout</li>
+            <li class="active">Fast delivery (same/next day)</li>
+          </ul>
+          <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
+        </div>
+        <div class="pricing-card tilt-card featured reveal reveal-delay-2">
+          <div class="pricing-name">💎 Personal Brand Site</div>
+          <div class="pricing-price"><sup>$</sup>120<span style="font-size:1.2rem;font-weight:500;letter-spacing:0">–180</span></div>
+          <div class="pricing-desc">The full package for standing out professionally online.</div>
+          <div class="personal-badge">✅ Perfect for job hunting &amp; college portfolios</div>
+          <ul class="pricing-features">
+            <li class="active">Multi-page site (Home, About, Projects, Contact)</li>
+            <li class="active">Custom personal branding (colors, fonts, style)</li>
+            <li class="active">Featured projects with visuals</li>
+            <li class="active">Social media integration</li>
+            <li class="active">Optional blog / updates page</li>
+            <li class="active">SEO setup (Google visibility)</li>
+            <li class="active">Better animations &amp; transitions</li>
+            <li class="active">Stronger design customization</li>
+            <li class="active">Priority support</li>
+          </ul>
+          <a href="#contact" class="btn-primary" style="width:100%;text-align:center;display:block">Get Started</a>
+        </div>
       </div>
     </div>
 
@@ -546,7 +645,7 @@
       </div>
     </div>
 
-    <!-- HOSTING + WHY CHOOSE US -->
+    <!-- HOSTING + WHY -->
     <div class="pricing-footer reveal" style="margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
       <div class="pricing-info-card">
         <div style="font-size:1.3rem;margin-bottom:0.75rem">🌐</div>
@@ -579,9 +678,11 @@
     <div class="section-header reveal">
       <div class="section-tag">Portfolio</div>
       <h2 class="section-title">Recent <span class="gradient-text">Projects</span></h2>
-      <p class="section-sub">A few of the businesses I've helped grow their online presence.</p>
+      <p class="section-sub">A few sites I've built — for businesses, brands, and individuals.</p>
     </div>
     <div class="projects-grid" style="grid-template-columns:repeat(2,1fr)">
+
+      <!-- PROJECT 1: Replace src="Bridge.png" with your image, href with your link, and update title/description -->
       <div class="project-card reveal reveal-delay-1">
         <img src="Bridge.png" alt="Bridge" style="width:100%;height:100%;object-fit:cover;object-position:top">
         <div class="project-overlay">
@@ -590,22 +691,29 @@
           <a href="https://olabs.app" target="_blank" class="proj-view-btn">Visit Site</a>
         </div>
       </div>
+
+      <!-- PROJECT 2: Replace src="your-image.png", href="your-url", title and description -->
       <div class="project-card reveal reveal-delay-2">
-        <div class="project-mockup" style="background:linear-gradient(135deg,#0d1117,#1a2a1a)">
+        <img src="ruthvik.png" alt="Project 2" style="width:100%;height:100%;object-fit:cover;object-position:top" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="project-mockup" style="display:none;background:linear-gradient(135deg,#0d1117,#1a2a1a)">
           <div class="proj-bar" style="background:#10B981;width:45%;height:8px"></div>
           <div class="proj-bar" style="background:rgba(255,255,255,0.1);width:85%"></div>
           <div style="display:flex;gap:5px;margin-top:8px">
             <div style="flex:1;height:55px;background:rgba(16,185,129,0.12);border-radius:6px;border:1px solid rgba(16,185,129,0.2)"></div>
-            <div style="flex:1;height:55px;background:rgba(16,185,129,0.06);border-radius:6px;border:1px solid rgba(255,255,255,0.06)"></div>
+            <div style="flex:1;height:55px;background:rgba(16,185,129,0.06);border-radius:6px"></div>
           </div>
         </div>
         <div class="project-overlay">
-          <h3>Project 2</h3>
-          <p>Coming soon</p>
+          <h3>Personal Portfolio </h3>
+          <!-- Uncomment and fill in when ready: -->
+          <a href="https://www.ruthviktatineni.com/" target="_blank" class="proj-view-btn">Visit Site</a> 
         </div>
       </div>
+
+      <!-- PROJECT 3: Replace src="your-image.png", href="your-url", title and description -->
       <div class="project-card reveal reveal-delay-3">
-        <div class="project-mockup" style="background:linear-gradient(135deg,#13111a,#1a1228)">
+        <img src="your-image-3.png" alt="Project 3" style="width:100%;height:100%;object-fit:cover;object-position:top" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="project-mockup" style="display:none;background:linear-gradient(135deg,#13111a,#1a1228)">
           <div class="proj-bar" style="background:#8B5CF6;width:55%;height:8px"></div>
           <div class="proj-bar" style="background:rgba(255,255,255,0.1);width:90%"></div>
           <div style="margin-top:8px;height:70px;background:rgba(139,92,246,0.12);border-radius:6px;border:1px solid rgba(139,92,246,0.2)"></div>
@@ -613,10 +721,14 @@
         <div class="project-overlay">
           <h3>Project 3</h3>
           <p>Coming soon</p>
+          <!-- <a href="https://your-site.com" target="_blank" class="proj-view-btn">Visit Site</a> -->
         </div>
       </div>
+
+      <!-- PROJECT 4: Replace src="your-image.png", href="your-url", title and description -->
       <div class="project-card reveal reveal-delay-4">
-        <div class="project-mockup" style="background:linear-gradient(135deg,#111827,#1a1505)">
+        <img src="your-image-4.png" alt="Project 4" style="width:100%;height:100%;object-fit:cover;object-position:top" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="project-mockup" style="display:none;background:linear-gradient(135deg,#111827,#1a1505)">
           <div class="proj-bar" style="background:#F59E0B;width:50%;height:8px"></div>
           <div class="proj-bar" style="background:rgba(255,255,255,0.1);width:80%"></div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:8px">
@@ -628,8 +740,10 @@
         <div class="project-overlay">
           <h3>Project 4</h3>
           <p>Coming soon</p>
+          <!-- <a href="https://your-site.com" target="_blank" class="proj-view-btn">Visit Site</a> -->
         </div>
       </div>
+
     </div>
     <p class="reveal" style="margin-top:1.5rem;color:var(--sub);font-size:0.875rem;text-align:center">More projects coming soon — reach out to see examples of my work directly.</p>
   </div>
@@ -653,7 +767,7 @@
         </div>
         <div class="contact-detail">
           <div class="contact-detail-icon">🌍</div>
-          <span>Based in Haymarket, VA · Serving local businesses</span>
+          <span>Based in Haymarket, VA · Working with clients everywhere</span>
         </div>
         <div style="margin-top:2rem;border-radius:14px;overflow:hidden;border:1px solid var(--card-border);height:200px">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24741!2d-77.638!3d38.813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b65a01e2e5f9b%3A0x57b4a13c5e1c7c7c!2sHaymarket%2C%20VA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="200" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -790,6 +904,24 @@ document.querySelectorAll('.tilt-card').forEach(card=>{
   });
   card.addEventListener('mouseleave',()=>{ card.style.transition='transform 0.5s ease, box-shadow 0.3s, background 0.3s'; card.style.transform='perspective(700px) rotateX(0deg) rotateY(0deg) translateZ(0px)'; });
 });
+
+function switchTab(tab) {
+  const business = document.getElementById('plansBusiness');
+  const personal = document.getElementById('plansPersonal');
+  const tabB = document.getElementById('tabBusiness');
+  const tabP = document.getElementById('tabPersonal');
+  if (tab === 'business') {
+    business.style.display = '';
+    personal.style.display = 'none';
+    tabB.classList.add('active');
+    tabP.classList.remove('active');
+  } else {
+    business.style.display = 'none';
+    personal.style.display = '';
+    tabB.classList.remove('active');
+    tabP.classList.add('active');
+  }
+}
 
 function toggleAddons() {
   const hidden=document.querySelectorAll('.addon-hidden'),btn=document.getElementById('addonToggle');
