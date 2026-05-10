@@ -198,6 +198,36 @@
     margin-bottom: 1.25rem;
   }
 
+  .booking-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .booking-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.3px;
+  }
+  .booking-info p {
+    color: var(--sub);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+  .booking-embed {
+    background: var(--glass);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  @media (max-width: 768px) {
+    .booking-wrap { grid-template-columns: 1fr; }
+    .booking-embed iframe { height: 500px; }
+  }
+
   .addon-toggle-btn { background: var(--glass); backdrop-filter: blur(12px); border: 1px solid var(--card-border); border-radius: 50px; padding: 0.5rem 1.4rem; font-size: 0.85rem; font-weight: 500; color: var(--blue); cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif; }
   .addon-toggle-btn:hover { background: var(--blue-dim); border-color: rgba(59,130,246,0.4); }
 
@@ -694,7 +724,7 @@
 
       <!-- PROJECT 2: Replace src="your-image.png", href="your-url", title and description -->
       <div class="project-card reveal reveal-delay-2">
-        <img src="ruthvik.png" alt="Project 2" style="width:100%;height:100%;object-fit:cover;object-position:top" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <img src="your-image-2.png" alt="Project 2" style="width:100%;height:100%;object-fit:cover;object-position:top" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="project-mockup" style="display:none;background:linear-gradient(135deg,#0d1117,#1a2a1a)">
           <div class="proj-bar" style="background:#10B981;width:45%;height:8px"></div>
           <div class="proj-bar" style="background:rgba(255,255,255,0.1);width:85%"></div>
@@ -704,9 +734,10 @@
           </div>
         </div>
         <div class="project-overlay">
-          <h3>Personal Portfolio </h3>
+          <h3>Project 2</h3>
+          <p>Coming soon</p>
           <!-- Uncomment and fill in when ready: -->
-          <a href="https://www.ruthviktatineni.com/" target="_blank" class="proj-view-btn">Visit Site</a> 
+          <!-- <a href="https://your-site.com" target="_blank" class="proj-view-btn">Visit Site</a> -->
         </div>
       </div>
 
@@ -752,50 +783,92 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <div class="section-tag">Let's Talk</div>
-        <h2 class="section-title">Want a Website?<br><span class="gradient-text">Let's Make It Happen.</span></h2>
-        <p>Send me a message and I'll get back to you within 24 hours. If I already reached out to you, your site might already be ready to look at.</p>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">✉️</div>
-          <span>apexenlabsdev@gmail.com</span>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">💬</div>
-          <span>Same-day builds when I approach you · 2–5 days if you reach out</span>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">🌍</div>
-          <span>Based in Haymarket, VA · Working with clients everywhere</span>
-        </div>
-        <div style="margin-top:2rem;border-radius:14px;overflow:hidden;border:1px solid var(--card-border);height:200px">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24741!2d-77.638!3d38.813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b65a01e2e5f9b%3A0x57b4a13c5e1c7c7c!2sHaymarket%2C%20VA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="200" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-      <div class="contact-form reveal reveal-delay-2">
-        <form action="https://formspree.io/f/maqazeor" method="POST">
-          <div class="form-row">
-            <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="Alex" required></div>
-            <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Johnson"></div>
+    <div class="section-header reveal" style="text-align:center">
+      <div class="section-tag">Let's Talk</div>
+      <h2 class="section-title">Want a Website?<br><span class="gradient-text">Let's Make It Happen.</span></h2>
+      <p class="section-sub" style="margin:0 auto">Book a free call or send me a message — whichever works best for you.</p>
+    </div>
+
+    <!-- CONTACT TABS -->
+    <div class="pricing-toggle-wrap reveal" style="margin-bottom:2rem">
+      <button class="pricing-tab" id="tabMessage" onclick="switchContact('message')">✉️ Send a Message</button>
+      <button class="pricing-tab active" id="tabBook" onclick="switchContact('book')">📅 Book a Meeting</button>
+    </div>
+
+    <!-- MESSAGE FORM -->
+    <div id="contactMessage" style="display:none">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">✉️</div>
+            <span>apexenlabsdev@gmail.com</span>
           </div>
-          <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="alex@company.com" required></div>
-          <div class="form-group"><label>Business Name</label><input type="text" name="business_name" placeholder="Your Company"></div>
-          <div class="form-group">
-            <label>Which plan are you interested in?</label>
-            <select name="plan">
-              <option value="">Select a plan...</option>
-              <option>Starter — $150</option>
-              <option>Standard — $200</option>
-              <option>Premium — $300</option>
-              <option>Not sure yet</option>
-            </select>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">💬</div>
+            <span>Same-day builds when I approach you · 2–5 days if you reach out</span>
           </div>
-          <div class="form-group"><label>Tell me about your project</label><textarea name="message" placeholder="What do you need? What's your goal? Any deadline?"></textarea></div>
-          <button type="submit" class="btn-primary form-submit">Send Message →</button>
-        </form>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🌍</div>
+            <span>Based in Haymarket, VA · Working with clients everywhere</span>
+          </div>
+          <div style="margin-top:2rem;border-radius:14px;overflow:hidden;border:1px solid var(--card-border);height:200px">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24741!2d-77.638!3d38.813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b65a01e2e5f9b%3A0x57b4a13c5e1c7c7c!2sHaymarket%2C%20VA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="200" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="contact-form reveal reveal-delay-2">
+          <form action="https://formspree.io/f/maqazeor" method="POST">
+            <div class="form-row">
+              <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="Alex" required></div>
+              <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Johnson"></div>
+            </div>
+            <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="alex@company.com" required></div>
+            <div class="form-group"><label>Business Name</label><input type="text" name="business_name" placeholder="Your Company"></div>
+            <div class="form-group">
+              <label>Which plan are you interested in?</label>
+              <select name="plan">
+                <option value="">Select a plan...</option>
+                <option>Starter — $150</option>
+                <option>Standard — $200</option>
+                <option>Premium — $300</option>
+                <option>Starter Profile — $50</option>
+                <option>Personal Brand — $120–180</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Tell me about your project</label><textarea name="message" placeholder="What do you need? What's your goal? Any deadline?"></textarea></div>
+            <button type="submit" class="btn-primary form-submit">Send Message →</button>
+          </form>
+        </div>
       </div>
     </div>
+
+    <!-- BOOKING -->
+    <div id="contactBook">
+      <div class="booking-wrap reveal">
+        <div class="booking-info">
+          <div style="font-size:2rem;margin-bottom:0.75rem">📅</div>
+          <h3>Book a Meeting</h3>
+          <p>Pick a time that works for you and we'll talk through your project — no pressure, no commitment. I'll answer any questions and we can get started right away.</p>
+          <div class="contact-detail" style="margin-top:1.5rem">
+            <div class="contact-detail-icon">⏱️</div>
+            <span>15–30 min · Free · No obligation</span>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🎥</div>
+            <span>Video or voice — your choice</span>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">⚡</div>
+            <span>Same-day or next-day slots available</span>
+          </div>
+          <a href="https://cal.com/apexenlabs/talk-about-websites" target="_blank" class="btn-primary" style="display:inline-block;margin-top:1.5rem;padding:0.8rem 2rem;font-size:0.95rem">Open Full Booking Page ↗</a>
+        </div>
+        <div class="booking-embed">
+          <iframe src="https://cal.com/apexenlabs/talk-about-websites?embed=true" style="width:100%;height:600px;border:none;border-radius:var(--radius)" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -904,6 +977,20 @@ document.querySelectorAll('.tilt-card').forEach(card=>{
   });
   card.addEventListener('mouseleave',()=>{ card.style.transition='transform 0.5s ease, box-shadow 0.3s, background 0.3s'; card.style.transform='perspective(700px) rotateX(0deg) rotateY(0deg) translateZ(0px)'; });
 });
+
+function switchContact(tab) {
+  const msg = document.getElementById('contactMessage');
+  const book = document.getElementById('contactBook');
+  const tabM = document.getElementById('tabMessage');
+  const tabB = document.getElementById('tabBook');
+  if (tab === 'message') {
+    msg.style.display = ''; book.style.display = 'none';
+    tabM.classList.add('active'); tabB.classList.remove('active');
+  } else {
+    msg.style.display = 'none'; book.style.display = '';
+    tabM.classList.remove('active'); tabB.classList.add('active');
+  }
+}
 
 function switchTab(tab) {
   const business = document.getElementById('plansBusiness');
