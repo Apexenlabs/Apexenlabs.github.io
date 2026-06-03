@@ -235,10 +235,11 @@
 <script>
 const canvas = document.getElementById('particle-canvas');
 const ctx = canvas.getContext('2d');
-let particles = [];
+let particles = [], mouse = { x: -9999, y: -9999 };
 function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
 resize();
 window.addEventListener('resize', resize);
+window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
 class Particle {
   constructor() { this.reset(); }
   reset() { this.x = Math.random()*canvas.width; this.y = Math.random()*canvas.height; this.vx = (Math.random()-0.5)*0.4; this.vy = (Math.random()-0.5)*0.4; this.size = Math.random()*1.5+0.5; this.opacity = Math.random()*0.3+0.1; }
@@ -246,7 +247,8 @@ class Particle {
   draw() { ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.fillStyle=`rgba(59,130,246,${this.opacity})`; ctx.fill(); }
 }
 particles = Array.from({length:60},()=>new Particle());
-function animate() { ctx.clearRect(0,0,canvas.width,canvas.height); particles.forEach(p=>{p.update();p.draw();}); requestAnimationFrame(animate); }
+function connect() { const maxDist=100, mouseMaxDist=140; for(let i=0;i<particles.length;i++){for(let j=i+1;j<particles.length;j++){const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<maxDist){const alpha=(1-dist/maxDist)*0.45;ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle=`rgba(59,130,246,${alpha})`;ctx.lineWidth=1;ctx.stroke();}}const mdx=particles[i].x-mouse.x,mdy=particles[i].y-mouse.y,mdist=Math.sqrt(mdx*mdx+mdy*mdy);if(mdist<mouseMaxDist){const alpha=(1-mdist/mouseMaxDist)*0.75;ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(mouse.x,mouse.y);ctx.strokeStyle=`rgba(59,130,246,${alpha})`;ctx.lineWidth=1.5;ctx.stroke();}} }
+function animate() { ctx.clearRect(0,0,canvas.width,canvas.height); particles.forEach(p=>{p.update();p.draw();}); connect(); requestAnimationFrame(animate); }
 animate();
 
 const themeToggle = document.getElementById('themeToggle');
