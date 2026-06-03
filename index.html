@@ -8,11 +8,9 @@
 <meta property="og:description" content="Professional websites for businesses, brands, and personal portfolios. Fast, modern, and built to convert.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://apexenlabs.github.io/">
-
 <meta property="og:image" content="https://apexenlabs.github.io/preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ApexenLabs — Websites That Convert">
 <meta name="twitter:description" content="Professional websites for businesses, brands, and personal portfolios.">
@@ -51,9 +49,7 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; transition: background 0.4s, color 0.4s; }
   h1,h2,h3,h4 { font-family: 'Inter', sans-serif; }
-
   #particle-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; opacity: 0.6; }
-
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 2rem; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: var(--nav-glass); border-bottom: 1px solid var(--border); transition: background 0.4s; }
   .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
   .logo { font-family: 'Inter', sans-serif; font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; text-decoration: none; color: var(--text); }
@@ -66,12 +62,11 @@
   .btn-primary:hover { transform: scale(1.04); box-shadow: 0 0 24px var(--blue-glow); }
   .btn-outline { background: transparent; color: var(--text); padding: 0.55rem 1.3rem; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--card-border); cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; }
   .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
-  .theme-toggle { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--card-border); background: var(--glass); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: all 0.2s; backdrop-filter: blur(10px); }
-  .theme-toggle:hover { border-color: var(--blue); background: var(--blue-dim); }
-
+  .theme-toggle { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--card-border); background: var(--glass); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; backdrop-filter: blur(10px); color: var(--sub); }
+  .theme-toggle:hover { border-color: var(--blue); background: var(--blue-dim); color: var(--blue); }
+  .theme-toggle svg { width: 16px; height: 16px; fill: currentColor; }
   section { position: relative; z-index: 1; }
   .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-
   #hero { min-height: 100vh; display: flex; align-items: center; padding: 5rem 0 4rem; position: relative; }
   .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; width: 100%; }
   .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--blue-dim); border: 1px solid rgba(59,130,246,0.3); border-radius: 50px; padding: 0.3rem 0.9rem; font-size: 0.75rem; color: var(--blue); font-weight: 500; margin-bottom: 1rem; }
@@ -89,7 +84,6 @@
   .trust-avatars span:first-child { margin-left: 0; }
   .stars { color: #FBBF24; font-size: 0.8rem; letter-spacing: -1px; }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
   .hero-visual { position: relative; height: 520px; opacity: 0; animation: fadeUp 1s var(--ease) 0.3s forwards; }
   .mock-browser { position: absolute; top: 0; left: 0; right: 0; background: var(--glass); backdrop-filter: blur(16px); border: 1px solid var(--card-border); border-radius: var(--radius); overflow: hidden; animation: float 6s ease-in-out infinite; }
   @keyframes float { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
@@ -112,12 +106,10 @@
   .float-card.analytics { top: 160px; right: -20px; width: 180px; animation: float 5.5s ease-in-out 0.5s infinite; }
   .float-card.code { bottom: 120px; left: -20px; animation: float 4.5s ease-in-out 1.5s infinite; }
   .card-label { font-size: 0.68rem; color: var(--sub); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
-
   .section-tag { font-size: 0.75rem; font-weight: 500; color: var(--blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
   .section-title { font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 1rem; }
   .section-sub { color: var(--sub); font-size: 1rem; line-height: 1.7; font-weight: 300; max-width: 540px; }
   .section-header { margin-bottom: 2rem; }
-
   #services { padding: 4rem 0; }
   .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
   .service-card { background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 2rem; transition: transform 0.3s var(--ease), box-shadow 0.3s, background 0.3s; cursor: default; position: relative; overflow: hidden; }
@@ -129,7 +121,6 @@
   .service-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: -0.3px; }
   .service-card p { color: var(--sub); font-size: 0.9rem; line-height: 1.7; font-weight: 300; }
   .service-tag { display: inline-block; margin-top: 1.2rem; padding: 0.3rem 0.8rem; background: var(--blue-dim); border-radius: 50px; font-size: 0.75rem; color: var(--blue); font-weight: 500; }
-
   #process { padding: 4rem 0; background: linear-gradient(180deg, transparent, var(--bg2) 30%, var(--bg2) 70%, transparent); }
   .process-timeline { position: relative; max-width: 700px; margin: 0 auto; }
   .timeline-line { position: absolute; left: 28px; top: 0; bottom: 0; width: 1px; background: linear-gradient(180deg, transparent, var(--blue), transparent); }
@@ -140,7 +131,6 @@
   .step-content { padding-top: 0.8rem; flex: 1; }
   .step-content h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.3px; }
   .step-content p { color: var(--sub); font-size: 0.9rem; line-height: 1.7; font-weight: 300; }
-
   #pricing { padding: 4rem 0; }
   .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
   .pricing-card { background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 2.5rem 2rem; transition: transform 0.3s var(--ease), box-shadow 0.3s; position: relative; overflow: hidden; }
@@ -155,7 +145,6 @@
   .pricing-features li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.875rem; color: var(--sub); margin-bottom: 0.75rem; font-weight: 300; }
   .pricing-features li::before { content: ''; width: 16px; height: 16px; border-radius: 50%; background: var(--blue-dim); border: 1px solid rgba(59,130,246,0.3); flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%233B82F6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; }
   .pricing-features li.active { color: var(--text); }
-
   .addons-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
   .addon-hidden { display: none; }
   .addon-hidden.shown { display: flex; flex-direction: column; }
@@ -164,26 +153,21 @@
   .addon-label { font-size: 0.8rem; color: var(--sub); line-height: 1.4; }
   .personal-grid { grid-template-columns: repeat(2, 1fr); max-width: 820px; margin: 0 auto; }
   @media (max-width: 768px) { .personal-grid { grid-template-columns: 1fr !important; } }
-
   .pricing-toggle-wrap { display: flex; gap: 0.5rem; background: var(--glass); border: 1px solid var(--card-border); border-radius: 50px; padding: 0.35rem; width: fit-content; margin: 0 auto 2.5rem; }
   .pricing-tab { padding: 0.55rem 1.5rem; border-radius: 50px; border: none; background: transparent; color: var(--sub); font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.25s; }
   .pricing-tab.active { background: var(--blue); color: #fff; box-shadow: 0 0 20px var(--blue-glow); }
   .personal-badge { display: inline-block; background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.3); border-radius: 8px; padding: 0.45rem 0.75rem; font-size: 0.8rem; color: #10B981; font-weight: 500; margin-bottom: 1.25rem; }
-
   .booking-wrap { display: grid; grid-template-columns: 1fr 1.6fr; gap: 3rem; align-items: start; }
   .booking-info h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: -0.3px; }
   .booking-info p { color: var(--sub); font-size: 0.95rem; line-height: 1.7; font-weight: 300; }
   .booking-embed { background: var(--glass); backdrop-filter: blur(16px); border: 1px solid var(--card-border); border-radius: var(--radius); overflow: hidden; }
   @media (max-width: 768px) { .booking-wrap { grid-template-columns: 1fr; } .booking-embed iframe { height: 500px; } }
-
   .addon-toggle-btn { background: var(--glass); backdrop-filter: blur(12px); border: 1px solid var(--card-border); border-radius: 50px; padding: 0.5rem 1.4rem; font-size: 0.85rem; font-weight: 500; color: var(--blue); cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif; }
   .addon-toggle-btn:hover { background: var(--blue-dim); border-color: rgba(59,130,246,0.4); }
-
   .pricing-info-card { background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 1.75rem; }
   .pricing-info-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; }
   .pricing-info-card p { color: var(--sub); font-size: 0.875rem; line-height: 1.7; }
   .payment-badge { display: flex; align-items: center; gap: 0.4rem; background: var(--glass); border: 1px solid var(--card-border); border-radius: 50px; padding: 0.4rem 1rem; font-size: 0.85rem; font-weight: 500; backdrop-filter: blur(10px); }
-
   #projects { padding: 4rem 0; }
   .projects-grid { display: grid; gap: 1.5rem; margin-top: 3rem; }
   .project-card { border-radius: var(--radius); overflow: hidden; position: relative; aspect-ratio: 4/3; background: var(--bg2); border: 1px solid var(--card-border); cursor: pointer; transition: transform 0.3s var(--ease); }
@@ -196,7 +180,6 @@
   .project-overlay p { color: rgba(255,255,255,0.7); font-size: 0.8rem; font-weight: 300; }
   .proj-view-btn { margin-top: 1rem; background: #fff; color: #111; padding: 0.45rem 1.2rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; border: none; cursor: pointer; transition: transform 0.2s; text-decoration: none; display: inline-block; }
   .proj-view-btn:hover { transform: scale(1.05); }
-
   #contact { padding: 4rem 0; }
   .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
   .contact-info h2 { margin-bottom: 1rem; }
@@ -212,7 +195,6 @@
   .form-group textarea { resize: vertical; min-height: 120px; }
   .form-group select option { background: var(--bg2); }
   .form-submit { width: 100%; padding: 0.9rem; font-size: 0.95rem; font-weight: 500; margin-top: 0.5rem; }
-
   footer { border-top: 1px solid var(--border); padding: 3rem 0 2rem; position: relative; z-index: 1; }
   .footer-inner { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
   .footer-brand p { color: var(--sub); font-size: 0.875rem; line-height: 1.7; margin-top: 0.75rem; font-weight: 300; }
@@ -225,26 +207,21 @@
   .socials { display: flex; gap: 0.75rem; }
   .social-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--card-border); background: var(--glass); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; text-decoration: none; color: var(--sub); }
   .social-btn:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-dim); }
-
   .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
   .reveal.visible { opacity: 1; transform: translateY(0); }
   .reveal-delay-1 { transition-delay: 0.1s; }
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
   .reveal-delay-4 { transition-delay: 0.4s; }
-
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
   .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
-
   .tilt-card { transform-style: preserve-3d; transition: transform 0.1s; }
   .gradient-text { background: linear-gradient(135deg, var(--blue), #60A5FA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-
   .stats-row { display: flex; gap: 0.75rem; margin-top: 1rem; opacity: 1 !important; transform: none !important; }
   .stat-card { flex: 1; background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.35); border-top: 3px solid var(--blue); border-radius: 14px; padding: 1.1rem 0.75rem; text-align: center; opacity: 1 !important; transform: none !important; }
   [data-theme="light"] .stat-card { background: rgba(59,130,246,0.08); border-color: rgba(59,130,246,0.2); }
   .stat-num { font-size: 1.6rem; font-weight: 800; letter-spacing: -1px; color: var(--blue); line-height: 1; }
   .stat-label { font-size: 0.72rem; color: var(--sub); margin-top: 0.3rem; line-height: 1.3; }
-
   @media (min-width: 1025px) { .addon-hidden { display: flex !important; flex-direction: column; } #addonToggle { display: none; } }
   @media (max-width: 1024px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } .footer-inner { grid-template-columns: 1fr 1fr; } .hero-h1 { font-size: 2.8rem; } }
   @media (min-width: 769px) and (max-width: 1024px) { #hero { align-items: flex-start; padding-top: 7rem; } }
@@ -263,7 +240,6 @@
     .addons-grid { grid-template-columns: repeat(2, 1fr); } .addon-hidden { display: none; } #addonToggle { display: inline-block; }
   }
   @media (max-width: 480px) { .footer-inner { grid-template-columns: 1fr; } .pricing-grid { grid-template-columns: 1fr; } }
-
   .mobile-menu { display: none !important; position: fixed; inset: 0; background: var(--bg); z-index: 99; padding: 5rem 2rem 2rem; flex-direction: column; gap: 1.5rem; }
   .mobile-menu.open { display: flex !important; }
   .mobile-menu a { text-decoration: none; color: var(--text); font-size: 1.8rem; font-weight: 700; letter-spacing: -0.5px; transition: color 0.2s; }
@@ -272,9 +248,7 @@
 </style>
 </head>
 <body>
-
 <canvas id="particle-canvas"></canvas>
-
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">Apexen<span>Labs</span></a>
@@ -286,22 +260,23 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">
+        <svg id="iconMoon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg id="iconSun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
       <a href="#contact" class="btn-primary nav-cta">Get Started</a>
       <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </div>
   </div>
 </nav>
-
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="mobileClose">✕</button>
+  <button class="mobile-close" id="mobileClose">&#x2715;</button>
   <a href="#services" onclick="closeMobile()">Services</a>
   <a href="#process" onclick="closeMobile()">Process</a>
   <a href="#pricing" onclick="closeMobile()">Pricing</a>
   <a href="#projects" onclick="closeMobile()">Projects</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
 </div>
-
 <!-- HERO -->
 <section id="hero">
   <div class="container">
@@ -317,14 +292,14 @@
         <div class="hero-trust">
           <div class="trust-avatars"><span>AK</span><span>TM</span><span>JS</span><span>RL</span></div>
           <div>
-            <div class="stars">★★★★★</div>
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             <div>Trusted by 50+ clients worldwide</div>
           </div>
         </div>
         <div class="stats-row">
           <div class="stat-card"><div class="stat-num">50+</div><div class="stat-label">Sites Launched</div></div>
           <div class="stat-card"><div class="stat-num">98%</div><div class="stat-label">Client Satisfaction</div></div>
-          <div class="stat-card"><div class="stat-num">3×</div><div class="stat-label">Avg Conversion</div></div>
+          <div class="stat-card"><div class="stat-num">3x</div><div class="stat-label">Avg Conversion</div></div>
         </div>
       </div>
       <div class="hero-visual">
@@ -352,9 +327,9 @@
               </div>
             </div>
             <div class="mock-cards-row">
-              <div class="mock-card-mini"><div style="font-size:0.9rem;margin-bottom:4px">🔧</div><div class="bar" style="height:5px;background:var(--border);border-radius:3px;width:90%;margin-bottom:3px"></div></div>
-              <div class="mock-card-mini"><div style="font-size:0.9rem;margin-bottom:4px">🚿</div><div class="bar" style="height:5px;background:var(--border);border-radius:3px;width:80%;margin-bottom:3px"></div></div>
-              <div class="mock-card-mini"><div style="font-size:0.9rem;margin-bottom:4px">⚡</div><div class="bar" style="height:5px;background:var(--border);border-radius:3px;width:85%;margin-bottom:3px"></div></div>
+              <div class="mock-card-mini"><div style="font-size:0.9rem;margin-bottom:4px">&#128295;</div><div class="bar" style="height:5px;background:var(--border);border-radius:3px;width:90%;margin-bottom:3px"></div></div>
+              <div class="mock-card-mini"><div style="font-size:0.9rem;margin-bottom:4px">&#128705;</div><div class="bar" style="height:5px;background:var(--border);border-radius:3px;width:80%;margin-bottom:3px"></div></div>
+              <div class="mock-card-mini"><div style="font-size:0.9rem;margin-bottom:4px">&#9889;</div><div class="bar" style="height:5px;background:var(--border);border-radius:3px;width:85%;margin-bottom:3px"></div></div>
             </div>
           </div>
         </div>
@@ -381,7 +356,7 @@
             <div style="padding:0.4rem 0.5rem"><div style="height:5px;background:var(--border);border-radius:3px;width:80%;margin-bottom:3px"></div></div>
           </div>
           <div style="margin-top:0.5rem;display:flex;align-items:center;gap:4px">
-            <span style="font-size:0.65rem;color:#FBBF24">★★★★★</span>
+            <span style="font-size:0.65rem;color:#FBBF24">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
             <span style="font-size:0.65rem;color:var(--sub)">48 reviews</span>
           </div>
         </div>
@@ -399,7 +374,6 @@
     </div>
   </div>
 </section>
-
 <!-- SERVICES -->
 <section id="services">
   <div class="container">
@@ -410,25 +384,25 @@
     </div>
     <div class="services-grid">
       <div class="service-card tilt-card reveal reveal-delay-1">
-        <div class="service-icon">🌐</div>
+        <div class="service-icon">&#127760;</div>
         <h3>Business Websites</h3>
         <p>A professional website that tells the world what your business does, builds trust, and turns visitors into customers or leads.</p>
         <span class="service-tag">Most Popular</span>
       </div>
       <div class="service-card tilt-card reveal reveal-delay-2">
-        <div class="service-icon">🙋</div>
+        <div class="service-icon">&#128100;</div>
         <h3>Personal Portfolios</h3>
         <p>Stand out to employers, colleges, or clients with a clean portfolio that shows your work, skills, and story. Built to impress.</p>
         <span class="service-tag">Great for careers</span>
       </div>
       <div class="service-card tilt-card reveal reveal-delay-3">
-        <div class="service-icon">🚀</div>
+        <div class="service-icon">&#128640;</div>
         <h3>Landing Pages</h3>
         <p>One focused page built to drive action — perfect for promotions, ads, product launches, or getting sign-ups fast.</p>
         <span class="service-tag">High ROI</span>
       </div>
       <div class="service-card tilt-card reveal reveal-delay-4">
-        <div class="service-icon">📱</div>
+        <div class="service-icon">&#128241;</div>
         <h3>Mobile-First Design</h3>
         <p>Every site I build works perfectly on phones, tablets, and desktops. Your audience is on mobile — your site will be too.</p>
         <span class="service-tag">All Devices</span>
@@ -436,7 +410,6 @@
     </div>
   </div>
 </section>
-
 <!-- PROCESS -->
 <section id="process">
   <div class="container">
@@ -466,7 +439,6 @@
     </div>
   </div>
 </section>
-
 <!-- PRICING -->
 <section id="pricing">
   <div class="container">
@@ -476,13 +448,13 @@
       <p class="section-sub" style="margin:0 auto">No hidden fees, no surprises. Pick the package that fits your goals.</p>
     </div>
     <div class="pricing-toggle-wrap reveal">
-      <button class="pricing-tab active" id="tabBusiness" onclick="switchTab('business')">💼 For Businesses</button>
-      <button class="pricing-tab" id="tabPersonal" onclick="switchTab('personal')">🙋 For Personal</button>
+      <button class="pricing-tab active" id="tabBusiness" onclick="switchTab('business')">For Businesses</button>
+      <button class="pricing-tab" id="tabPersonal" onclick="switchTab('personal')">For Personal</button>
     </div>
     <div id="plansBusiness">
       <div class="pricing-grid">
         <div class="pricing-card tilt-card reveal reveal-delay-1">
-          <div class="pricing-name">🟢 Starter</div>
+          <div class="pricing-name">Starter</div>
           <div class="pricing-price"><sup>$</sup>150</div>
           <div class="pricing-desc">Perfect for businesses getting online fast.</div>
           <ul class="pricing-features">
@@ -498,7 +470,7 @@
           <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
         </div>
         <div class="pricing-card tilt-card featured reveal reveal-delay-2">
-          <div class="pricing-name">⭐ Standard</div>
+          <div class="pricing-name">Standard</div>
           <div class="pricing-price"><sup>$</sup>200</div>
           <div class="pricing-desc">Designed to help businesses look professional and convert visitors into customers.</div>
           <ul class="pricing-features">
@@ -515,7 +487,7 @@
           <a href="#contact" class="btn-primary" style="width:100%;text-align:center;display:block">Get Started</a>
         </div>
         <div class="pricing-card tilt-card reveal reveal-delay-3">
-          <div class="pricing-name">💎 Premium</div>
+          <div class="pricing-name">Premium</div>
           <div class="pricing-price"><sup>$</sup>300</div>
           <div class="pricing-desc">For businesses wanting a stronger brand presence and custom experience.</div>
           <ul class="pricing-features">
@@ -535,10 +507,10 @@
     <div id="plansPersonal" style="display:none">
       <div class="pricing-grid personal-grid">
         <div class="pricing-card tilt-card reveal reveal-delay-1">
-          <div class="pricing-name">🟢 Starter Profile</div>
+          <div class="pricing-name">Starter Profile</div>
           <div class="pricing-price"><sup>$</sup>50</div>
           <div class="pricing-desc">Simple portfolio or resume-style site. Get online instantly.</div>
-          <div class="personal-badge">✅ Great for colleges &amp; job applications</div>
+          <div class="personal-badge">Great for colleges &amp; job applications</div>
           <ul class="pricing-features">
             <li class="active">1-page personal website</li>
             <li class="active">About section</li>
@@ -552,10 +524,10 @@
           <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
         </div>
         <div class="pricing-card tilt-card featured reveal reveal-delay-2">
-          <div class="pricing-name">💎 Personal Brand Site</div>
+          <div class="pricing-name">Personal Brand Site</div>
           <div class="pricing-price"><sup>$</sup>120<span style="font-size:1.2rem;font-weight:500;letter-spacing:0">–180</span></div>
           <div class="pricing-desc">The full package for standing out professionally online.</div>
-          <div class="personal-badge">✅ Perfect for job hunting &amp; college portfolios</div>
+          <div class="personal-badge">Perfect for job hunting &amp; college portfolios</div>
           <ul class="pricing-features">
             <li class="active">Multi-page site (Home, About, Projects, Contact)</li>
             <li class="active">Custom personal branding (colors, fonts, style)</li>
@@ -572,7 +544,7 @@
       </div>
     </div>
     <div class="reveal" style="margin-top:2.5rem">
-      <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.25rem;text-align:center">🔧 Add-Ons</h3>
+      <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.25rem;text-align:center">Add-Ons</h3>
       <div class="addons-grid">
         <div class="addon-item"><span class="addon-price">+$5</span><span class="addon-label">Google Maps Integration</span></div>
         <div class="addon-item"><span class="addon-price">+$10</span><span class="addon-label">Extra Section</span></div>
@@ -583,17 +555,17 @@
         <div class="addon-item addon-hidden"><span class="addon-price">+$15</span><span class="addon-label">Image Gallery</span></div>
       </div>
       <div style="text-align:center;margin-top:1rem">
-        <button class="addon-toggle-btn" id="addonToggle" onclick="toggleAddons()">Show More ↓</button>
+        <button class="addon-toggle-btn" id="addonToggle" onclick="toggleAddons()">Show More</button>
       </div>
     </div>
     <div class="pricing-footer reveal" style="margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
       <div class="pricing-info-card">
-        <div style="font-size:1.3rem;margin-bottom:0.75rem">🌐</div>
+        <div style="font-size:1.3rem;margin-bottom:0.75rem">&#127760;</div>
         <h4>Website &amp; Hosting</h4>
         <p>Every plan includes a free hosted link — your site is live and ready to share. Custom domains are fully supported (domain &amp; hosting purchased separately by you).</p>
       </div>
       <div class="pricing-info-card">
-        <div style="font-size:1.3rem;margin-bottom:0.75rem">✔</div>
+        <div style="font-size:1.3rem;margin-bottom:0.75rem">&#10004;</div>
         <h4>Why Choose Me</h4>
         <p>One-time payment. No monthly fees. Fast turnaround. Clean design. Simple process — no tech confusion needed on your end.</p>
         <p style="margin-top:0.75rem;color:var(--blue);font-weight:500;font-size:0.875rem">Ongoing edits &amp; updates — $20/month</p>
@@ -602,14 +574,13 @@
     <div class="reveal" style="margin-top:1.5rem;background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--card-border);border-radius:var(--radius);padding:1.5rem 2rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap">
       <span style="font-size:0.875rem;color:var(--sub);font-weight:500">Accepted payments:</span>
       <div style="display:flex;gap:1rem;flex-wrap:wrap">
-        <div class="payment-badge"><span>💵</span> Cash</div>
-        <div class="payment-badge"><span>💚</span> CashApp</div>
-        <div class="payment-badge" style="opacity:0.5"><span>➕</span> More coming soon</div>
+        <div class="payment-badge">Cash</div>
+        <div class="payment-badge">CashApp</div>
+        <div class="payment-badge" style="opacity:0.5">More coming soon</div>
       </div>
     </div>
   </div>
 </section>
-
 <!-- PROJECTS -->
 <section id="projects">
   <div class="container">
@@ -619,8 +590,6 @@
       <p class="section-sub">A few sites I've built — for businesses, brands, and individuals.</p>
     </div>
     <div class="projects-grid" style="grid-template-columns:repeat(2,1fr)">
-
-      <!-- PROJECT 1: Bridge -->
       <div class="project-card reveal reveal-delay-1">
         <img src="Bridge.png" alt="Bridge" style="width:100%;height:100%;object-fit:cover;object-position:top" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="project-mockup" style="display:none;background:linear-gradient(135deg,#0B0F14,#111827)">
@@ -633,17 +602,11 @@
           <a href="https://olabs.app" target="_blank" class="proj-view-btn">Visit Site</a>
         </div>
       </div>
-
-      <!-- PROJECT 2: Ruthvik Tatenini -->
       <div class="project-card reveal reveal-delay-2">
         <img src="ruthvik.png" alt="Ruthvik Tatenini" style="width:100%;height:100%;object-fit:cover;object-position:top" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="project-mockup" style="display:none;background:linear-gradient(135deg,#0d1117,#1a2a1a)">
           <div class="proj-bar" style="background:#10B981;width:45%;height:8px"></div>
           <div class="proj-bar" style="background:rgba(255,255,255,0.1);width:85%"></div>
-          <div style="display:flex;gap:5px;margin-top:8px">
-            <div style="flex:1;height:55px;background:rgba(16,185,129,0.12);border-radius:6px;border:1px solid rgba(16,185,129,0.2)"></div>
-            <div style="flex:1;height:55px;background:rgba(16,185,129,0.06);border-radius:6px"></div>
-          </div>
         </div>
         <div class="project-overlay">
           <h3>Ruthvik Tatenini</h3>
@@ -651,17 +614,11 @@
           <a href="https://ruthviktatenini.com" target="_blank" class="proj-view-btn">Visit Site</a>
         </div>
       </div>
-
-      <!-- PROJECT 3: BM Cleaning VA -->
       <div class="project-card reveal reveal-delay-3">
         <img src="bmcleaning.png" alt="BM Cleaning VA" style="width:100%;height:100%;object-fit:cover;object-position:top" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="project-mockup" style="display:none;background:linear-gradient(135deg,#0a1628,#0f2040)">
           <div class="proj-bar" style="background:#38BDF8;width:55%;height:8px"></div>
           <div class="proj-bar" style="background:rgba(255,255,255,0.1);width:80%"></div>
-          <div style="margin-top:8px;display:flex;gap:5px">
-            <div style="width:35%;height:60px;background:rgba(56,189,248,0.12);border-radius:5px;border:1px solid rgba(56,189,248,0.2)"></div>
-            <div style="flex:1;height:60px;background:rgba(56,189,248,0.06);border-radius:5px"></div>
-          </div>
         </div>
         <div class="project-overlay">
           <h3>BM Cleaning VA</h3>
@@ -669,20 +626,15 @@
           <a href="https://bmcleaningva.github.io" target="_blank" class="proj-view-btn">Visit Site</a>
         </div>
       </div>
-
-      <!-- PROJECT 4: Empty slot -->
       <div class="project-card reveal reveal-delay-4" style="background:var(--glass);border:1px dashed var(--card-border)">
         <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;opacity:0.3">
           <div style="font-size:2rem">+</div>
-          <div style="font-size:0.8rem;color:var(--sub)">More coming soon</div>
         </div>
       </div>
-
     </div>
     <p class="reveal" style="margin-top:1.5rem;color:var(--sub);font-size:0.875rem;text-align:center">Reach out to see more examples of my work directly.</p>
   </div>
 </section>
-
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
@@ -692,22 +644,22 @@
       <p class="section-sub" style="margin:0 auto">Book a meeting or send me a message — whichever works best for you.</p>
     </div>
     <div class="pricing-toggle-wrap reveal" style="margin-bottom:2rem">
-      <button class="pricing-tab" id="tabMessage" onclick="switchContact('message')">✉️ Send a Message</button>
-      <button class="pricing-tab active" id="tabBook" onclick="switchContact('book')">📅 Book a Meeting</button>
+      <button class="pricing-tab" id="tabMessage" onclick="switchContact('message')">Send a Message</button>
+      <button class="pricing-tab active" id="tabBook" onclick="switchContact('book')">Book a Meeting</button>
     </div>
     <div id="contactMessage" style="display:none">
       <div class="contact-grid">
         <div class="contact-info reveal">
           <div class="contact-detail">
-            <div class="contact-detail-icon">✉️</div>
-            <span>apexenlabsdev@gmail.com</span>
+            <div class="contact-detail-icon">&#9993;</div>
+            <span>neel@vermaclub.com</span>
           </div>
           <div class="contact-detail">
-            <div class="contact-detail-icon">💬</div>
+            <div class="contact-detail-icon">&#128172;</div>
             <span>Same-day builds when I approach you · 2–5 days if you reach out</span>
           </div>
           <div class="contact-detail">
-            <div class="contact-detail-icon">🌍</div>
+            <div class="contact-detail-icon">&#127757;</div>
             <span>Based in Haymarket, VA · Working with clients everywhere</span>
           </div>
           <div style="margin-top:2rem;border-radius:14px;overflow:hidden;border:1px solid var(--card-border);height:200px">
@@ -735,7 +687,7 @@
               </select>
             </div>
             <div class="form-group"><label>Tell me about your project</label><textarea name="message" placeholder="What do you need? What's your goal? Any deadline?"></textarea></div>
-            <button type="submit" class="btn-primary form-submit">Send Message →</button>
+            <button type="submit" class="btn-primary form-submit">Send Message</button>
           </form>
         </div>
       </div>
@@ -743,22 +695,21 @@
     <div id="contactBook">
       <div class="booking-wrap reveal">
         <div class="booking-info">
-          <div style="font-size:2rem;margin-bottom:0.75rem">📅</div>
           <h3>Book a Meeting</h3>
           <p>Pick a time that works for you and we'll talk through your project — no pressure, no commitment. I'll answer any questions and we can get started right away.</p>
           <div class="contact-detail" style="margin-top:1.5rem">
-            <div class="contact-detail-icon">⏱️</div>
+            <div class="contact-detail-icon">&#9200;</div>
             <span>15–30 min · Free · No obligation</span>
           </div>
           <div class="contact-detail">
-            <div class="contact-detail-icon">🎥</div>
+            <div class="contact-detail-icon">&#127909;</div>
             <span>Video or voice — your choice</span>
           </div>
           <div class="contact-detail">
-            <div class="contact-detail-icon">⚡</div>
+            <div class="contact-detail-icon">&#9889;</div>
             <span>Same-day or next-day slots available</span>
           </div>
-          <a href="https://cal.com/apexenlabs/talk-about-websites" target="_blank" class="btn-primary" style="display:inline-block;margin-top:1.5rem;padding:0.8rem 2rem;font-size:0.95rem">Open Full Booking Page ↗</a>
+          <a href="https://cal.com/apexenlabs/talk-about-websites" target="_blank" class="btn-primary" style="display:inline-block;margin-top:1.5rem;padding:0.8rem 2rem;font-size:0.95rem">Open Full Booking Page</a>
         </div>
         <div class="booking-embed">
           <iframe src="https://cal.com/apexenlabs/talk-about-websites?embed=true" style="width:100%;height:600px;border:none;border-radius:var(--radius)" loading="lazy"></iframe>
@@ -767,7 +718,6 @@
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer>
   <div class="container">
@@ -776,10 +726,10 @@
         <a href="#" class="logo">Apexen<span>Labs</span></a>
         <p>Building clean, professional websites for businesses and individuals. Let's get you online.</p>
         <div class="socials" style="margin-top:1rem">
-          <a class="social-btn" href="#" title="Twitter">𝕏</a>
+          <a class="social-btn" href="#" title="Twitter">X</a>
           <a class="social-btn" href="#" title="LinkedIn">in</a>
-          <a class="social-btn" href="#" title="GitHub">⌥</a>
-          <a class="social-btn" href="#" title="Instagram">◉</a>
+          <a class="social-btn" href="#" title="GitHub">GH</a>
+          <a class="social-btn" href="#" title="Instagram">IG</a>
         </div>
       </div>
       <div class="footer-col">
@@ -798,24 +748,24 @@
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#process">Process</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
         <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Refund Policy</a></li>
+          <li><a href="policy.html">Privacy Policy</a></li>
+          <li><a href="policy.html#terms">Terms of Service</a></li>
+          <li><a href="policy.html#refund">Refund Policy</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 ApexenLabs. All rights reserved.</span>
-      <span>Crafted with precision & passion 🔥</span>
+      <span>&#169; 2026 ApexenLabs. All rights reserved.</span>
+      <span>Crafted with precision &amp; passion</span>
     </div>
   </div>
 </footer>
-
 <script>
 const canvas = document.getElementById('particle-canvas');
 const ctx = canvas.getContext('2d');
@@ -847,9 +797,16 @@ function animate() { ctx.clearRect(0,0,canvas.width,canvas.height); particles.fo
 animate();
 
 const themeToggle = document.getElementById('themeToggle');
+const iconMoon = document.getElementById('iconMoon');
+const iconSun = document.getElementById('iconSun');
 let isDark = true;
-function setTheme(dark) { isDark=dark; document.documentElement.setAttribute('data-theme',isDark?'dark':'light'); themeToggle.textContent=isDark?'🌙':'☀️'; }
-themeToggle.addEventListener('click',()=>setTheme(!isDark));
+function setTheme(dark) {
+  isDark = dark;
+  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  iconMoon.style.display = isDark ? 'block' : 'none';
+  iconSun.style.display = isDark ? 'none' : 'block';
+}
+themeToggle.addEventListener('click', () => setTheme(!isDark));
 
 document.getElementById('hamburger').addEventListener('click',()=>{ document.getElementById('mobileMenu').classList.toggle('open'); });
 document.getElementById('mobileClose').addEventListener('click',closeMobile);
@@ -891,7 +848,7 @@ function toggleAddons() {
   const hidden=document.querySelectorAll('.addon-hidden'), btn=document.getElementById('addonToggle');
   const isShown=hidden[0].classList.contains('shown');
   hidden.forEach(el=>el.classList.toggle('shown',!isShown));
-  btn.textContent=isShown?'Show More ↓':'Show Less ↑';
+  btn.textContent=isShown?'Show More':'Show Less';
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
